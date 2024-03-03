@@ -39,6 +39,7 @@ exports.petController = {
         status: 200,
         data: await petRepository.retrieve(id),
       };
+      console.log(result.data);
       if (result.data === null) {
         throw new petDoesntExist(id);
       }
